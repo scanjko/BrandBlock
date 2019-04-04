@@ -1,0 +1,47 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * Product view template
+ *
+ * @see \Magento\Catalog\Block\Product\View\Description
+ */
+?>
+<?php
+$_helper = $this->helper('Magento\Catalog\Helper\Output');
+$_product = $block->getProduct();
+$_call = $block->getAtCall();
+//$_code = $block->getAtCode();
+//$_className = $block->getCssClass();
+//$_attributeLabel = $block->getAtLabel();
+//$_attributeType = $block->getAtType();
+//$_attributeAddAttribute = $block->getAddAttribute();
+//$brandName = $block->getBrandName();
+$cat = $block->getCategoryCollection();
+
+?>
+
+<div class="brend">
+
+    <div class="brand__name">
+        <a href="<?= $cat->getImageUrl() ?>"><?= $cat->getName(); ?></a>
+    </div>
+
+    <div class="brand__img">
+        <img src="<?= $cat->getImageUrl() ?>" alt="">
+    </div>
+
+    <div class="brand__description"><?= $cat->getData('description'); ?></div>
+
+</div>
+
+
+
+
+
+
